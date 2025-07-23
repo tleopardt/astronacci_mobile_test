@@ -5,12 +5,13 @@ class AuthController extends GetxController {
   var token = ''.obs;
   var email = ''.obs;
   var username = ''.obs;
+  var isLoggedIn = false.obs;
 
   void setAuth({ 
     required String resultId, 
     required String resultToken, 
     required String resultEmail, 
-    required String resultName 
+    required String resultName,
   }) {
     userId.value = resultId;
     token.value = resultToken;
